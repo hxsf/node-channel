@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "alwaysStrict": true,
+        "target": "esnext",
+        "lib": [
+            "esnext"
+        ],
+        "baseUrl": "src",
+        "outDir": "dist",
+        "declaration": true,
+        "declarationDir": "."
+    },
+    "files": [
+        "src/index.ts"
+    ]
+}

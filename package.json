@@ -1,0 +1,13 @@
+{
+  "name": "node-channel",
+  "version": "1.0.0",
+  "description": "A channel util for javascript like go-channel.",
+  "main": "dist/index.js",
+  "repository": "git@github.com:hxsf/node-channel.git",
+  "author": "npm@hxsf.me",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^11.11.1",
+    "typescript": "^3.3.3333"
+  }
+}
