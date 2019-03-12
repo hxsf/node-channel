@@ -4,7 +4,7 @@ A channel util for javascript like go-channel
 ## Example
 
 ``` js
-import { Channel } from 'channel'
+import { Channel } from 'node-channel'
 
 function do_something_async(ms: number): Promise<void> {
     return new Promise<void>((resolve, reject) => {

@@ -1,5 +1,5 @@
 {
-  "name": "channel",
+  "name": "node-channel",
   "version": "1.0.0",
   "description": "A channel util for javascript like go-channel.",
   "main": "dist/index.js",
