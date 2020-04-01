@@ -9,7 +9,7 @@ export class Channel<T> {
     private can_add_queue: (() => void)[]
     private can_get_queue: (() => void)[]
     private _state: ChannelState = ChannelState.Open;
-    private closed_handle?: (() => void)
+    private closed_listener?: () => void
     public get state(): ChannelState {
         return this._state;
     }
@@ -29,10 +29,10 @@ export class Channel<T> {
                 this._state = ChannelState.CLosed
                 resolve()
             } else {
-                this.closed_handle = () => {
+                this.closed_listener = (() => {
                     this._state = ChannelState.CLosed
                     resolve()
-                }
+                })
             }
         })
     }
@@ -74,6 +74,7 @@ export class Channel<T> {
                 await fn()
             }
             this._state = ChannelState.CLosed
+            if (this.closed_listener) this.closed_listener()
             return Promise.resolve(undefined)
         }
         return new Promise<T>((resolve) => {

@@ -19,7 +19,7 @@ async function pub() {
         console.log(`[${Date.now() - uptime}] [add] [${label}] to chan.`)
         console.log(`[${Date.now() - uptime}] [total] ${chan.size()}/${chan.max_size}.`)
     }
-    chan.close()
+    await chan.close()
 }
 async function sub() {
     while (1) {
