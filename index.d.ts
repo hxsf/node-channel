@@ -9,7 +9,7 @@ export declare class Channel<T> {
     private can_add_queue;
     private can_get_queue;
     private _state;
-    private closed_handle?;
+    private closed_listener?;
     readonly state: ChannelState;
     constructor(max_size: number);
     size(): number;
