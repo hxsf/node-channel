@@ -5,6 +5,7 @@
         "lib": [
             "esnext"
         ],
+        "module": "CommonJS",
         "baseUrl": "src",
         "outDir": "dist",
         "declaration": true,
